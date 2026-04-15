@@ -1,0 +1,43 @@
+# ============================================================
+# Spring Boot 3 通用配置
+# ============================================================
+spring:
+  profiles:
+    active: dev
+
+  # Jackson 序列化配置
+  jackson:
+    default-property-inclusion: non_null
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Shanghai
+
+# ============================================================
+# Actuator 监控端点
+# ============================================================
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,env
+  endpoint:
+    health:
+      show-details: when-authorized
+
+# ============================================================
+# 日志配置
+# ============================================================
+logging:
+  level:
+    root: INFO
+    com.example.demo: DEBUG
+    org.springframework.security: INFO
+
+# ============================================================
+# 自定义配置 — 对应 AppConfig.java
+# ============================================================
+app:
+  name: JDK17 SP3 Scaffold
+  version: 1.0.0
+  audit-enabled: true
+  default-page-size: 10
+  jwt-secret: dev-only-secret-change-in-prod

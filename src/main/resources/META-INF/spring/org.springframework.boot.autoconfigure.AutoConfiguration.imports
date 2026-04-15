@@ -1,0 +1,10 @@
+# Spring Boot 3 自动配置注册
+# 替代 SP2 的 spring.factories
+#
+# SP2 写法（spring.factories）：
+#   org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+#     com.example.demo.autoconfig.AuditAutoConfiguration
+#
+# SP3 写法（本文件）：
+#   直接写全限定类名，每行一个
+com.example.demo.autoconfig.AuditAutoConfiguration
