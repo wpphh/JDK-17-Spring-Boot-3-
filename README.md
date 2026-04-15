@@ -4,6 +4,45 @@
 
 ---
 
+## 目录
+
+- [1. 项目概述](#1-项目概述)
+- [2. 技术栈](#2-技术栈)
+- [3. 项目结构](#3-项目结构)
+- [4. JDK 17 新特性详解](#4-jdk-17-新特性详解)
+  - [4.1 Record 类](#41-record-类不可变数据载体)
+  - [4.2 Sealed Class](#42-sealed-class密封类)
+  - [4.3 Pattern Matching for instanceof](#43-pattern-matching-for-instanceof)
+  - [4.4 Text Block](#44-text-block文本块)
+  - [4.5 Switch 表达式](#45-switch-表达式)
+- [5. Spring Boot 3 核心变化详解](#5-spring-boot-3-核心变化详解)
+  - [5.1 jakarta 命名空间](#51-jakarta-命名空间最大的破坏性变更)
+  - [5.2 SecurityFilterChain](#52-securityfilterchain安全配置方式重写)
+  - [5.3 RestClient](#53-restclient新的同步-http-客户端)
+  - [5.4 AutoConfiguration.imports](#54-autoconfigurationimports自动配置注册方式变更)
+  - [5.5 @ConfigurationProperties](#55-configurationproperties配置属性绑定)
+- [6. 快速开始](#6-快速开始)
+- [7. API 接口文档](#7-api-接口文档)
+  - [7.1 认证接口](#71-认证接口--apiauth)
+  - [7.2 用户接口](#72-用户接口--apiusers)
+  - [7.3 公开端点](#73-公开端点无需认证)
+  - [7.4 管理端点](#74-管理端点需-admin-角色)
+- [8. 配置说明](#8-配置说明)
+  - [8.1 通用配置](#81-applicationyml通用配置)
+  - [8.2 开发环境配置](#82-application-devyml开发环境)
+  - [8.3 生产环境配置](#83-application-prodyml生产环境)
+  - [配置对照表](#配置对照表)
+- [9. 分层架构说明](#9-分层架构说明)
+  - [Controller 层](#controller-层)
+  - [Service 层](#service-层)
+  - [Repository 层](#repository-层)
+  - [Entity / Model 层](#entity--model-层)
+  - [全局异常处理](#全局异常处理)
+- [10. 测试说明](#10-测试说明)
+- [附录：SP2 → SP3 迁移速查表](#附录sp2--sp3-迁移速查表)
+
+---
+
 ## 1. 项目概述
 
 本项目是一个 **JDK 17 + Spring Boot 3.4** 脚手架项目，旨在帮助开发者快速上手新一代 Java 技术栈。项目以用户管理（User CRUD）为业务场景，完整演示了以下核心能力：
